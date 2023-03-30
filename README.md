@@ -1,5 +1,5 @@
 # Parallel Frequency Analysis
-This library provides a function `frequency()` which counts the occurrence of each alphabetic cas-insensitive Unicode character in the input string. It is my solution to the "Parallel Letter Frequency" exercise on Exercism.org.
+This library provides a function `frequency()` which counts the occurrence of each alphabetic case-insensitive Unicode character in the input string. It is my solution to the "Parallel Letter Frequency" exercise on Exercism.org.
 
 # Usage
 Use `cargo test` to run tests.
