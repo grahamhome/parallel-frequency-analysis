@@ -1,7 +1,6 @@
 use rayon::prelude::*;
 use std::collections::{HashMap, HashSet};
 use std::str::FromStr;
-use unicode_segmentation::UnicodeSegmentation;
 
 mod tests;
 
@@ -13,9 +12,9 @@ pub fn frequency(input: &[&str], worker_count: usize) -> HashMap<char, usize> {
         .install(|| {
             let characters = input
                 .join("")
-                .graphemes(true)
-                .map(|g| char::from_str(g.to_lowercase().as_str()).unwrap())
-                .filter(|g| g.is_alphabetic())
+                .chars()
+                .map(|c| c.to_lowercase().next().unwrap())
+                .filter(|c| c.is_alphabetic())
                 .collect::<Vec<char>>();
             HashSet::<&char>::from_iter(characters.iter())
                 .par_iter()

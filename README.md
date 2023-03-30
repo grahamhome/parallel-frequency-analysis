@@ -5,6 +5,5 @@ This library provides a function `frequency()` which counts the occurrence of ea
 Use `cargo test` to run tests.
 
 # Concepts Reviewed
-- Rayon (`ThreadPoolBuilder`, `.par_iter()`) 
-- UnicodeSegmentation (`.graphemes()`)
+- Rayon (`ThreadPoolBuilder`, `.par_iter()`)
 - `.is_alphabetic()`
